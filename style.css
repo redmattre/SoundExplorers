@@ -1,0 +1,69 @@
+:root {
+    --pageUnit: calc(10vw / 2);
+    --gridColor: rgba(128, 128, 128, 0.6);
+}
+
+@media only screen and (orientation: portrait) {
+  :root {
+    --pageUnit: calc(10vw / 1);
+  }
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-size: var(--pageUnit) var(--pageUnit);
+     background-image:
+        linear-gradient(to right, var(--gridColor) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--gridColor) 1px, transparent 1px);
+}
+
+.verticalLines {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 100vh;
+    width: 1px;
+    background-color: red;
+}
+
+.horizontalLines {
+    display: none;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    height: 1px;
+    width: 100vw;
+    background-color: red;
+}
+
+#leftLine {
+    left: calc(var(--pageUnit) * 2 + 6px);
+}
+
+#rightLine {
+    right: calc(var(--pageUnit) * 2 + 6px);
+}
+
+#topLine {
+    top: calc(var(--pageUnit) + 6px);
+}
+
+.header {
+    margin: 0;
+    pad: 0;
+    position: sticky;
+    top: 0;
+    padding-top: 1rem;
+    /* background: transparent; */
+    /* background-color: red; */
+    /* margin-bottom: 6rem; */
+}
+
+#mascotte{
+    position: absolute;
+    align-items: right;
+    height: 4rem;
+    right: calc(var(--pageUnit)/2);
+    cursor: pointer;
+}
