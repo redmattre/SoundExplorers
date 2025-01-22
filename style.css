@@ -3,11 +3,20 @@
     --gridColor: rgba(128, 128, 128, 0.6);
     --fondale: #f7f9f1;
     --textColor: black;
+    font-size: 16px;
 }
 
 @media only screen and (orientation: portrait) {
   :root {
     --pageUnit: calc(10vw / 1);
+  }
+
+  .menuItem {
+    display: none;
+  }
+
+  #leftLine {
+    right: calc(var(--pageUnit) / 2 + 6px);
   }
 }
 
@@ -94,6 +103,7 @@ body {
     /* background-color: violet; */
     background-position: top;
     background-size: 115%;
+    background-repeat: no-repeat;
 }
 
 .menuItem{
@@ -106,7 +116,8 @@ body {
     position: absolute;
     height: 7rem;
     width: 7rem;
-    left: calc(44.7vw);
+    /* left: calc(44.7vw); */
+    left: calc(50vw - 3.5rem);
     /* background-color: red; */
     border-radius: 50%;
     top: 4rem;
