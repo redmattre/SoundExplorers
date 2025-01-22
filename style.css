@@ -15,9 +15,6 @@
     display: none;
   }
 
-  #leftLine {
-    right: calc(var(--pageUnit) / 2 + 6px);
-  }
 }
 
 body {
