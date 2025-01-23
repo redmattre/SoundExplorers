@@ -87,12 +87,12 @@ body {
 
 #titolo{
     /* display: none; */
-    /* position: absolute; */
+    position: absolute;
     align-items: right;
     /* background-color: violet; */
     /* height: 10rem; */
     /* left: calc(var(--pageUnit)/2); */
-    left: calc(50vw - 6rem);
+    left: calc(50vw - 7rem);
     cursor: pointer;
     height: 5rem;
     width: 14rem;
@@ -101,6 +101,12 @@ body {
     background-position: top;
     background-size: 115%;
     background-repeat: no-repeat;
+}
+
+#segnapostoTitolo {
+    /* background-color: red; */
+    height: 5rem;
+    width: 14rem;
 }
 
 .menuItem{
