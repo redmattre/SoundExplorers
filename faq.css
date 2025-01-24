@@ -1,0 +1,19 @@
+.faq-question {
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+    margin-bottom: calc(var(--pageUnit));
+    margin-top: calc(var(--pageUnit));
+}
+
+.faq-answer {
+    margin: 0;
+    padding: 0.5rem 0;
+}
+
+@media only screen and (orientation: portrait) {
+    .faq-question {
+        font-size: 1.2rem;
+    }
+  
+  }

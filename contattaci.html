@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="style.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
     <title>Landing</title>
 </head>
 <body>
@@ -35,6 +38,50 @@
     </div>
 
     <div class="newBody">
+
+        <!-- <div>placeholder: send us an email form (verde come in mockup)</div>
+        <div>placeholder: diventa partner! (rosso)</div>
+        <div>placeholder: collabora con noi! (giallo?)</div> -->
+
+        <div class="form-container verde">
+            <h2>Contattaci</h2>
+            <form id="contact-form">
+                <label for="fullname" class="hidden">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Inserisci il tuo nome" required>
+                
+                <label for="message" class="hidden">Messaggio</label>
+                <textarea id="message" name="message" rows="1" placeholder="Scrivi il tuo messaggio" required></textarea>
+                
+                <button type="submit">Invia</button>
+            </form>
+        </div>
+        
+        <div class="form-container rosso">
+            <h2>Diventa partner</h2>
+            <form id="contact-form">
+                <label for="fullname" class="hidden">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Inserisci il tuo nome" required>
+                
+                <label for="message" class="hidden">Messaggio</label>
+                <textarea id="message" name="message" rows="1" placeholder="Scrivi il tuo messaggio" required></textarea>
+                
+                <button type="submit">Invia</button>
+            </form>
+        </div>
+        
+        <div class="form-container giallo">
+            <h2>Lavora con noi</h2>
+            <form id="contact-form">
+                <label for="fullname" class="hidden">Full Name</label>
+                <input type="text" id="fullname" name="fullname" placeholder="Inserisci il tuo nome" required>
+                
+                <label for="message" class="hidden">Messaggio</label>
+                <textarea id="message" name="message" rows="1" placeholder="Scrivi il tuo messaggio" required></textarea>
+                
+                <button type="submit">Invia</button>
+            </form>
+        </div>
+
     </div>
 
     <div id="footer">
@@ -55,5 +102,22 @@
     <script src="scroll.js"></script>
     <script src="menu.js"></script>
     <script src="navigation.js"></script>
+    <script>
+        const form = document.getElementById('contact-form');
+        const recipientEmail = "tuoindirizzo@email.com"; // Cambia con il tuo indirizzo email
+
+        form.addEventListener('submit', (event) => {
+            event.preventDefault(); // Previene il comportamento di default
+
+            const name = document.getElementById('fullname').value;
+            const message = document.getElementById('message').value;
+
+            // Crea l'URL mailto con il corpo dell'email
+            const mailtoLink = `mailto:${recipientEmail}?subject=Messaggio da ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}`;
+
+            // Apri il client email
+            window.location.href = mailtoLink;
+        });
+    </script>
 </body>
 </html>

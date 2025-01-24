@@ -24,7 +24,7 @@
 
 body {
     color: var(--textColor);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: "Anonymous Pro", serif;
     background-color: var(--fondale);
     margin: 0;
     padding: 0;
@@ -40,6 +40,11 @@ body {
         linear-gradient(to right, var(--gridColor) 1px, transparent 1px),
         linear-gradient(to bottom, var(--gridColor) 1px, transparent 1px);
     overscroll-behavior: none;
+}
+
+.newBodyText {
+    /* background-color: violet; */
+    margin: 6.5rem 15rem;
 }
 
 .verticalLines {
@@ -101,7 +106,7 @@ body {
     opacity: 0;
     height: 100vh;
     transition: all .25s ease;
-    z-index: 0;
+    z-index: 500;
 
     display: flex;
     justify-content: center;
@@ -191,6 +196,112 @@ body {
     gap: calc(var(--pageUnit)*3);
     margin-top: 6.5rem;
     margin-bottom: 6.5rem;
+}
+
+/* Contenitore principale */
+.form-container {
+    --themeColor: var(--verde);
+
+    color: var(--themeColor);
+    border: 2px solid var(--themeColor);
+    height: calc(var(--pageUnit));
+    width: 50vw;
+    background-color: transparent;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative; /* Necessario per il posizionamento assoluto degli elementi interni */
+    padding: 4rem;
+    z-index: 100;
+}
+
+/* Titolo */
+.form-container h2 {
+    position: absolute;
+    top: 1rem;
+    left: 1rem;
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+/* Form */
+/* form {
+    position: relative;
+    width: 100%;
+    height: 100%;
+} */
+
+/* Campi di input */
+input,
+textarea {
+    position: absolute;
+    background-color: transparent;
+    border: none;
+    border-bottom: 1px solid var(--themeColor);
+    color: var(--themeColor);
+    padding: 0.5rem;
+    font-size: 1rem;
+    outline: none;
+    width: calc(50% - 2rem); /* Larghezza 50% meno padding */
+}
+
+input::placeholder,
+textarea::placeholder {
+    font-family: inherit; /* Eredita il font dal body */
+    color: var(--themeColor); /* Puoi cambiare il colore se necessario */
+    font-size: 1rem; /* Adatta le dimensioni */
+}
+
+/* Nome in basso a sinistra */
+#fullname {
+    bottom: 1rem;
+    left: 1rem;
+    margin-right: 1rem; /* Spazio tra i due input */
+}
+
+#message {
+    bottom: 1rem;
+    right: 1rem;
+    align-content: baseline;
+}
+
+/* Pulsante invia */
+button {
+    font-family: "Anonymous Pro", serif;
+    position: absolute;
+    top: 1rem; /* Azzera la distanza dall'alto */
+    right: 1rem; /* Azzera la distanza dal bordo destro */
+    margin: 0; /* Azzera i margini */
+    padding: 0.5rem 1rem; /* Definisce solo il padding interno */
+    background-color: var(--themeColor);
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+    border-radius: 0; /* Rimuove eventuali arrotondamenti */
+}
+
+button:hover {
+    background-color: transparent;
+}
+
+/* Nascondere etichette (accessibilità) */
+.hidden {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px); /* Nascondi fuori schermo */
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+/* Variante rossa */
+.form-container.rosso {
+    --themeColor: var(--rossino);
+}
+
+/* Variante gialla */
+.form-container.giallo {
+    --themeColor: var(--bluetto);
 }
 
 .card-container {
@@ -285,6 +396,15 @@ body {
 
     .newBody {
         margin-bottom: none;
+    }
+
+    .newBodyText {
+        /* background-color: violet; */
+        margin-top: 6.5rem;
+        margin-bottom: 6.5rem;
+        margin-right: 6rem;
+        margin-left: 7.5rem;
+        text-align: justify;
     }
 
     .verticalLines {

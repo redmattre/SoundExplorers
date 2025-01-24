@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="style.css">
+    <link type="text/css" rel="stylesheet" href="faq.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Anonymous+Pro:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+    </style>
     <title>Landing</title>
 </head>
 <body>
@@ -34,7 +38,44 @@
         <div class="menuItemMobile" id="faqM">FAQ</div>
     </div>
 
-    <div class="newBody">
+    <div class="newBodyText">
+
+        <ul class="faq-list">
+            <li>
+                <p class="faq-question">Che cosa è Sound Explorers?</p>
+                <p class="faq-answer" style="display: none;">Questa è la risposta alla domanda 1.</p>
+            </li>
+            <li>
+                <p class="faq-question">Cosa devo fare per organizzare un Camp?</p>
+                <p class="faq-answer" style="display: none;">Questa è la risposta alla domanda 2.</p>
+            </li>
+            <li>
+                <p class="faq-question">Cosa si impara?</p>
+                <p class="faq-answer" style="display: none;">Questa è la risposta alla domanda 3.</p>
+            </li>
+            <li>
+                <p class="faq-question">E' una scuola di strumento?</p>
+                <p class="faq-answer" style="display: none;">Questa è la risposta alla domanda 3.</p>
+            </li>
+            <li>
+                <p class="faq-question">Serve una preparazione musicale?</p>
+                <p class="faq-answer" style="display: none;">Questa è la risposta alla domanda 3.</p>
+            </li>
+            <li>
+                <p class="faq-question">Qual è l'età più indicata?</p>
+                <p class="faq-answer" style="display: none;">Questa è la risposta alla domanda 3.</p>
+            </li>
+            <li>
+                <p class="faq-question">C'è un concerto finale?</p>
+                <p class="faq-answer" style="display: none;">Questa è la risposta alla domanda 3.</p>
+            </li>
+            <li>
+                <p class="faq-question">C'è un diploma finale?</p>
+                <p class="faq-answer" style="display: none;">Si guarda questo: <a href="">fac-simile</a></p>
+            </li>
+        </ul>
+        <!-- Che cosa è? Come funziona? Come organizzare insieme a noi? Che materiali ci sono? Cosa si impara? E' una scuola di strumento? Serve una preparazione musicale? Qual è l'età più indicata? C'è un concerto finale? Bisogna portare qualcosa? C'è un diploma finale [risposta: link con scritto guarda che ti da un fac simile inserisci nome]? -->
+
     </div>
 
     <div id="footer">
@@ -55,5 +96,22 @@
     <script src="scroll.js"></script>
     <script src="menu.js"></script>
     <script src="navigation.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const questions = document.querySelectorAll(".faq-question");
+
+            questions.forEach((question) => {
+                question.addEventListener("click", function () {
+                    const answer = this.nextElementSibling;
+
+                    if (answer.style.display === "none") {
+                        answer.style.display = "block";
+                    } else {
+                        answer.style.display = "none";
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
