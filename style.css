@@ -45,13 +45,14 @@ body {
 .newBodyText {
     /* background-color: violet; */
     margin: 6.5rem 15rem;
+    line-height: 2rem;
 }
 
 .verticalLines {
     margin: 0;
     padding: 0;
     position: absolute;
-    height: 240vh;
+    height: 340vh;
     width: 1px;
     background-color: red;
 }
@@ -62,7 +63,7 @@ body {
     padding: 0;
     position: absolute;
     height: 1px;
-    width: 200vw;
+    width: 400vw;
     background-color: red;
 }
 
@@ -116,8 +117,9 @@ body {
 }
 
 .linea {
-    height: 1px;
+    height: 3px;
     width: 4rem;
+    background-color: var(--verde);
     background-color: black;
 }
 
@@ -402,13 +404,13 @@ button:hover {
         /* background-color: violet; */
         margin-top: 6.5rem;
         margin-bottom: 6.5rem;
-        margin-right: 6rem;
-        margin-left: 7.5rem;
-        text-align: justify;
+        margin-right: 4rem;
+        margin-left: 6rem;
+        text-align: left;
     }
 
     .verticalLines {
-        height: 200vh;
+        height: 1000vh;
     }
 
     #mobileMenu {
